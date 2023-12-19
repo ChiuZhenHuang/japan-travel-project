@@ -1,0 +1,248 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+header #icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+header #side-menu-switch {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+header #side-menu-switch:checked + nav {
+  display: block;
+}
+header .logo {
+  display: flex;
+  flex: 2 1 400px;
+  align-items: center;
+  font-size: 2rem;
+}
+header .logo img {
+  width: 8vw;
+  height: 8vh;
+}
+header .logo h3 {
+  margin: 0.5em;
+  font-weight: bolder;
+}
+header nav {
+  flex: 5 1 500px;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+  padding: 0;
+}
+header nav ul li {
+  border: 1px solid black;
+  border-radius: 100px;
+  transition: all 0.5s ease;
+  margin: 10px 0;
+}
+header nav ul li:hover {
+  border: 1px dotted #AAAAFF;
+  border-radius: 100px;
+}
+header nav ul li a {
+  display: block;
+  font-size: 1.3em;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+header nav ul li a:hover {
+  color: #6F00D2;
+}
+
+main .background-img {
+  min-height: 70vh;
+  background-image: url("../images/大阪街頭.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .background-img .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 70vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+main .background-img h3 {
+  font-size: 2em;
+  text-align: center;
+  color: white;
+}
+
+#playTitle {
+  display: block;
+  font-size: 2em;
+  text-align: center;
+  padding: 1em;
+  font-weight: bolder;
+}
+
+.play {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 2em;
+}
+.play .item {
+  flex: 0 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.play .item img {
+  border-radius: 50%;
+  width: 70%;
+  padding: 0.3em;
+  transition: all 0.1s ease;
+}
+.play .item img:hover {
+  border: 2px solid #6F00D2;
+}
+.play .item p {
+  padding: 1em;
+  font-weight: bolder;
+}
+
+.content {
+  background-image: url("../images/富士山2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+.content .mask2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 40vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.content h5 {
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+
+.geography {
+  margin: 1em;
+  text-align: center;
+}
+.geography h5 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin: 0.5em;
+}
+.geography p {
+  font-size: 1.2rem;
+  margin: 0.5em;
+}
+.geography iframe {
+  width: 100%;
+  height: 30vh;
+}
+
+footer {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../images/富士山2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+footer .mask3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 50vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+footer img {
+  width: 20%;
+}
+footer h3 {
+  color: white;
+  font-size: 2em;
+}
+footer .icons {
+  margin: 1em 0;
+}
+footer .icons a {
+  margin: 1em;
+}
+footer .icons a img {
+  width: 50px;
+}
+
+@media screen and (max-width: 680px) {
+  header #icon {
+    display: block;
+  }
+  header .logo {
+    justify-content: center;
+  }
+  header .logo img {
+    width: 10vw;
+    margin: 0.25em;
+  }
+  nav {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
